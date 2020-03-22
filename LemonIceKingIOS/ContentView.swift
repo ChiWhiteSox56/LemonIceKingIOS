@@ -9,13 +9,17 @@
 import SwiftUI
 
 struct ContentView: View {
+    var flavorStore: FlavorStore
+    
     var body: some View {
-        Text("Hello, World!")
+        List(flavorStore.flavors) { flavor in
+            Text(flavor.name)
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(flavorStore: FlavorStore() )
     }
 }

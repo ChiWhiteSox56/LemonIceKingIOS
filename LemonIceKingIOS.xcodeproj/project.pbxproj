@@ -16,6 +16,8 @@
 		964C825F241EE8EC00CD5C03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 964C825D241EE8EC00CD5C03 /* LaunchScreen.storyboard */; };
 		964C826A241EE8EC00CD5C03 /* LemonIceKingIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964C8269241EE8EC00CD5C03 /* LemonIceKingIOSTests.swift */; };
 		964C8275241EE8EC00CD5C03 /* LemonIceKingIOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964C8274241EE8EC00CD5C03 /* LemonIceKingIOSUITests.swift */; };
+		968ECFBC2426A8E800D1D14B /* Flavor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968ECFBB2426A8E800D1D14B /* Flavor.swift */; };
+		968ECFBE2426A8F400D1D14B /* FlavorStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968ECFBD2426A8F400D1D14B /* FlavorStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		964C8270241EE8EC00CD5C03 /* LemonIceKingIOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LemonIceKingIOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		964C8274241EE8EC00CD5C03 /* LemonIceKingIOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LemonIceKingIOSUITests.swift; sourceTree = "<group>"; };
 		964C8276241EE8EC00CD5C03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		968ECFBB2426A8E800D1D14B /* Flavor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flavor.swift; sourceTree = "<group>"; };
+		968ECFBD2426A8F400D1D14B /* FlavorStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlavorStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,7 @@
 		964C824E241EE8EA00CD5C03 /* LemonIceKingIOS */ = {
 			isa = PBXGroup;
 			children = (
+				968ECFBA2426A8D900D1D14B /* Models */,
 				964C824F241EE8EA00CD5C03 /* AppDelegate.swift */,
 				964C8251241EE8EA00CD5C03 /* SceneDelegate.swift */,
 				964C8256241EE8EA00CD5C03 /* ContentView.swift */,
@@ -137,6 +142,15 @@
 				964C8276241EE8EC00CD5C03 /* Info.plist */,
 			);
 			path = LemonIceKingIOSUITests;
+			sourceTree = "<group>";
+		};
+		968ECFBA2426A8D900D1D14B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				968ECFBB2426A8E800D1D14B /* Flavor.swift */,
+				968ECFBD2426A8F400D1D14B /* FlavorStore.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,8 +286,10 @@
 			files = (
 				964C8250241EE8EA00CD5C03 /* AppDelegate.swift in Sources */,
 				964C8252241EE8EA00CD5C03 /* SceneDelegate.swift in Sources */,
+				968ECFBC2426A8E800D1D14B /* Flavor.swift in Sources */,
 				964C8257241EE8EA00CD5C03 /* ContentView.swift in Sources */,
 				964C8255241EE8EA00CD5C03 /* LemonIceKingIOS.xcdatamodeld in Sources */,
+				968ECFBE2426A8F400D1D14B /* FlavorStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
