@@ -13,7 +13,12 @@ struct ContentView: View {
     
     var body: some View {
         List(flavorStore.flavors) { flavor in
-            Text(flavor.name)
+            HStack {
+                Text(flavor.name)
+                Image("ice_unchecked")
+                    .resizable()
+                    .frame(width: 40, height: 40, alignment: .leading)
+            }
         }
     }
 }
