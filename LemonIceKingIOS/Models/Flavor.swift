@@ -6,7 +6,12 @@
 //  Copyright © 2020 Cindy Michalowski. All rights reserved.
 //
 
-struct Flavor {
+import Foundation
+
+struct Flavor: Identifiable {
+    
+    let id = UUID()
     let name: String
+    
     var hasTriedIt: Bool = false
 }
