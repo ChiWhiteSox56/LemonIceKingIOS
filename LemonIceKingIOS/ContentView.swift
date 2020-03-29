@@ -13,15 +13,7 @@ struct ContentView: View {
     
     var body: some View {
         List(flavorStore.flavors) { flavor in
-            VStack {
-                HStack(spacing: 80) {
-                    Text(flavor.name)
-                    Spacer()
-                    Image("ice_unchecked")
-                        .resizable()
-                        .frame(width: 40, height: 40, alignment: .init(horizontal: .trailing, vertical: .center))
-                }.padding()
-            }
+            IceCustomCheckbox(action: {}, flavorName: flavor.name, flavorImageName: flavor.imageName, isChecked: flavor.isChecked)
         }
     }
 }
