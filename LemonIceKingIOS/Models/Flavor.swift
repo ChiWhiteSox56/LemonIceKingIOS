@@ -15,4 +15,8 @@ struct Flavor: Identifiable {
     let imageName: String
     
     var isChecked: Bool = false
+    
+    func getName() -> String {
+        return name
+    }
 }
