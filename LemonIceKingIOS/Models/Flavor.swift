@@ -13,6 +13,5 @@ struct Flavor: Identifiable {
     let id = UUID()
     let name: String
     let imageName: String
-    
     var isChecked: Bool = false
 }

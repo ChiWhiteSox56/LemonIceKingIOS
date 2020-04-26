@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "ice_unselected.png",
+      "filename" : "ice_unchecked.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
