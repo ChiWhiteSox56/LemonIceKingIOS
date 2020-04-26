@@ -28,6 +28,7 @@ struct IceCustomCheckbox: View {
                 Image(isChecked ? flavorImageName : "ice_unchecked")
                     .renderingMode(.original)
                     .resizable()
+                    .aspectRatio(contentMode: .fit )
                     .frame(width: 60, height: 60, alignment: .init(horizontal: .leading, vertical: .center))
             }
             Text(flavorName)
