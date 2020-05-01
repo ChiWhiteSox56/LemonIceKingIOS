@@ -13,7 +13,7 @@ struct ContentView: View {
     
     var body: some View {
         List(flavorStore.flavors) { flavor in
-            IceCustomCheckbox(action: {}, flavorName: flavor.name, flavorImageName: flavor.imageName, isChecked: flavor.isChecked)
+            IceCustomCheckbox(action: {}, flavorId: flavor.id, flavorName: flavor.name, flavorImageName: flavor.imageName, isChecked: flavor.isChecked)
         }
     }
 }

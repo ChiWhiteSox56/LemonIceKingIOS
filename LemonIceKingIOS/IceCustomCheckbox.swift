@@ -11,12 +11,14 @@ import SwiftUI
 struct IceCustomCheckbox: View {
     
     let action: () -> Void
+    let flavorId: UUID
     let flavorName: String
     let flavorImageName: String
     @State var isChecked: Bool = false
     
-    init(action: @escaping () -> Void, flavorName: String, flavorImageName: String, isChecked: Bool) {
+    init(action: @escaping () -> Void, flavorId: UUID, flavorName: String, flavorImageName: String, isChecked: Bool) {
         self.action = action
+        self.flavorId = flavorId
         self.flavorName = flavorName
         self.flavorImageName = flavorImageName
         self.isChecked = isChecked
