@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		963C48F9245C9BCA003D0EFE /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963C48F8245C9BCA003D0EFE /* Color.swift */; };
+		963C48FC245CBB11003D0EFE /* NavigationBarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963C48FB245CBB11003D0EFE /* NavigationBarModifier.swift */; };
+		963C48FE245CBCF1003D0EFE /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963C48FD245CBCF1003D0EFE /* View.swift */; };
 		964C8250241EE8EA00CD5C03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964C824F241EE8EA00CD5C03 /* AppDelegate.swift */; };
 		964C8252241EE8EA00CD5C03 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964C8251241EE8EA00CD5C03 /* SceneDelegate.swift */; };
 		964C8255241EE8EA00CD5C03 /* LemonIceKingIOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 964C8253241EE8EA00CD5C03 /* LemonIceKingIOS.xcdatamodeld */; };
@@ -39,6 +42,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		963C48F8245C9BCA003D0EFE /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		963C48FB245CBB11003D0EFE /* NavigationBarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarModifier.swift; sourceTree = "<group>"; };
+		963C48FD245CBCF1003D0EFE /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		964C824C241EE8EA00CD5C03 /* LemonIceKingIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LemonIceKingIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		964C824F241EE8EA00CD5C03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		964C8251241EE8EA00CD5C03 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +90,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		963C48F7245C9BA5003D0EFE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				963C48F8245C9BCA003D0EFE /* Color.swift */,
+				963C48FD245CBCF1003D0EFE /* View.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		963C48FA245CBAFC003D0EFE /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				963C48FB245CBB11003D0EFE /* NavigationBarModifier.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
 		964C8243241EE8EA00CD5C03 = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +130,8 @@
 		964C824E241EE8EA00CD5C03 /* LemonIceKingIOS */ = {
 			isa = PBXGroup;
 			children = (
+				963C48FA245CBAFC003D0EFE /* Modifiers */,
+				963C48F7245C9BA5003D0EFE /* Extensions */,
 				968ECFBA2426A8D900D1D14B /* Models */,
 				964C824F241EE8EA00CD5C03 /* AppDelegate.swift */,
 				964C8251241EE8EA00CD5C03 /* SceneDelegate.swift */,
@@ -289,9 +314,12 @@
 			files = (
 				964C8250241EE8EA00CD5C03 /* AppDelegate.swift in Sources */,
 				9652B6A92430E54E004DC3BC /* IceCustomCheckbox.swift in Sources */,
+				963C48FE245CBCF1003D0EFE /* View.swift in Sources */,
+				963C48FC245CBB11003D0EFE /* NavigationBarModifier.swift in Sources */,
 				964C8252241EE8EA00CD5C03 /* SceneDelegate.swift in Sources */,
 				968ECFBC2426A8E800D1D14B /* Flavor.swift in Sources */,
 				964C8257241EE8EA00CD5C03 /* ContentView.swift in Sources */,
+				963C48F9245C9BCA003D0EFE /* Color.swift in Sources */,
 				964C8255241EE8EA00CD5C03 /* LemonIceKingIOS.xcdatamodeld in Sources */,
 				968ECFBE2426A8F400D1D14B /* FlavorStore.swift in Sources */,
 			);

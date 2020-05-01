@@ -9,11 +9,23 @@
 import SwiftUI
 
 struct ContentView: View {
+
     var flavorStore: FlavorStore
-    
+
     var body: some View {
-        List(flavorStore.flavors) { flavor in
-            IceCustomCheckbox(action: {}, flavorId: flavor.id, flavorName: flavor.name, flavorImageName: flavor.imageName, isChecked: flavor.isChecked)
+        NavigationView {
+            List(flavorStore.flavors) { flavor in
+                IceCustomCheckbox(action: {}, flavorId: flavor.id, flavorName: flavor.name, flavorImageName: flavor.imageName, isChecked: flavor.isChecked)
+            }
+            .navigationBarTitle("Lemon Ice King Flavor Tracker", displayMode: .inline)
+            .navigationBarItems(trailing:
+                Button(action: {
+                    print("Flavor suggestion generator tapped!")
+                }) {
+                    Image(systemName: "person.crop.circle").imageScale(.large)
+                }
+            )
+                .navigationBarColor(UIColor.defaultNavigationBarColor)
         }
     }
 }
