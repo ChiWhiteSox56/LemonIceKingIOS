@@ -22,7 +22,7 @@ struct ContentView: View {
                 Button(action: {
                     print("Flavor suggestion generator tapped!")
                 }) {
-                    Image(systemName: "person.crop.circle").imageScale(.large)
+                    Image("ice_flavor_generator").imageScale(.small)
                 }
             )
                 .navigationBarColor(UIColor.defaultNavigationBarColor)
