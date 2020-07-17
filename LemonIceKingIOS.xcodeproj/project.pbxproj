@@ -20,6 +20,7 @@
 		964C826A241EE8EC00CD5C03 /* LemonIceKingIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964C8269241EE8EC00CD5C03 /* LemonIceKingIOSTests.swift */; };
 		964C8275241EE8EC00CD5C03 /* LemonIceKingIOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964C8274241EE8EC00CD5C03 /* LemonIceKingIOSUITests.swift */; };
 		9652B6A92430E54E004DC3BC /* IceCustomCheckbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9652B6A82430E54E004DC3BC /* IceCustomCheckbox.swift */; };
+		968D143D24BB48BB00BC130E /* FlavorList.json in Resources */ = {isa = PBXBuildFile; fileRef = 968D143C24BB48BB00BC130E /* FlavorList.json */; };
 		968ECFBC2426A8E800D1D14B /* Flavor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968ECFBB2426A8E800D1D14B /* Flavor.swift */; };
 		968ECFBE2426A8F400D1D14B /* FlavorStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968ECFBD2426A8F400D1D14B /* FlavorStore.swift */; };
 /* End PBXBuildFile section */
@@ -61,6 +62,7 @@
 		964C8274241EE8EC00CD5C03 /* LemonIceKingIOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LemonIceKingIOSUITests.swift; sourceTree = "<group>"; };
 		964C8276241EE8EC00CD5C03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9652B6A82430E54E004DC3BC /* IceCustomCheckbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IceCustomCheckbox.swift; sourceTree = "<group>"; };
+		968D143C24BB48BB00BC130E /* FlavorList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = FlavorList.json; sourceTree = "<group>"; };
 		968ECFBB2426A8E800D1D14B /* Flavor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flavor.swift; sourceTree = "<group>"; };
 		968ECFBD2426A8F400D1D14B /* FlavorStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlavorStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -130,6 +132,7 @@
 		964C824E241EE8EA00CD5C03 /* LemonIceKingIOS */ = {
 			isa = PBXGroup;
 			children = (
+				968D143B24BB488C00BC130E /* Resources */,
 				963C48FA245CBAFC003D0EFE /* Modifiers */,
 				963C48F7245C9BA5003D0EFE /* Extensions */,
 				968ECFBA2426A8D900D1D14B /* Models */,
@@ -170,6 +173,14 @@
 				964C8276241EE8EC00CD5C03 /* Info.plist */,
 			);
 			path = LemonIceKingIOSUITests;
+			sourceTree = "<group>";
+		};
+		968D143B24BB488C00BC130E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				968D143C24BB48BB00BC130E /* FlavorList.json */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		968ECFBA2426A8D900D1D14B /* Models */ = {
@@ -286,6 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				964C825F241EE8EC00CD5C03 /* LaunchScreen.storyboard in Resources */,
+				968D143D24BB48BB00BC130E /* FlavorList.json in Resources */,
 				964C825C241EE8EC00CD5C03 /* Preview Assets.xcassets in Resources */,
 				964C8259241EE8EC00CD5C03 /* Assets.xcassets in Resources */,
 			);
