@@ -1,0 +1,34 @@
+{
+   "flavors":[
+      {
+         "name":"Spumoni",
+         "imageName":"ice_spumoni",
+         "isChecked":false
+      },
+      {
+         "name":"Root beer",
+         "imageName":"ice_root_beer",
+         "isChecked":false
+      },
+      {
+         "name":"Lemon Lime",
+         "imageName":"ice_lemon_lime",
+         "isChecked":false
+      },
+      {
+         "name":"Oreo",
+         "imageName":"ice_oreo",
+         "isChecked":false
+      },
+      {
+         "name":"Cool Blue",
+         "imageName":"ice_cool_blue",
+         "isChecked":false
+      },
+      {
+         "name":"Lemon",
+         "imageName":"ice_lemon",
+         "isChecked":false
+      }
+   ]
+}
