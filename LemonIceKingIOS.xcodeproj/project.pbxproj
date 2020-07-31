@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		963C48F9245C9BCA003D0EFE /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963C48F8245C9BCA003D0EFE /* Color.swift */; };
-		963C48FC245CBB11003D0EFE /* NavigationBarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963C48FB245CBB11003D0EFE /* NavigationBarModifier.swift */; };
 		963C48FE245CBCF1003D0EFE /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963C48FD245CBCF1003D0EFE /* View.swift */; };
 		964C8250241EE8EA00CD5C03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964C824F241EE8EA00CD5C03 /* AppDelegate.swift */; };
 		964C8252241EE8EA00CD5C03 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964C8251241EE8EA00CD5C03 /* SceneDelegate.swift */; };
@@ -22,6 +21,7 @@
 		9652B6A92430E54E004DC3BC /* IceCustomCheckbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9652B6A82430E54E004DC3BC /* IceCustomCheckbox.swift */; };
 		968ECFBC2426A8E800D1D14B /* Flavor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968ECFBB2426A8E800D1D14B /* Flavor.swift */; };
 		968ECFBE2426A8F400D1D14B /* FlavorStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968ECFBD2426A8F400D1D14B /* FlavorStore.swift */; };
+		96FEBCDC24D4985D00C4423D /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FEBCDB24D4985D00C4423D /* Navigation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +43,6 @@
 
 /* Begin PBXFileReference section */
 		963C48F8245C9BCA003D0EFE /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		963C48FB245CBB11003D0EFE /* NavigationBarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarModifier.swift; sourceTree = "<group>"; };
 		963C48FD245CBCF1003D0EFE /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		964C824C241EE8EA00CD5C03 /* LemonIceKingIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LemonIceKingIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		964C824F241EE8EA00CD5C03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +62,7 @@
 		9652B6A82430E54E004DC3BC /* IceCustomCheckbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IceCustomCheckbox.swift; sourceTree = "<group>"; };
 		968ECFBB2426A8E800D1D14B /* Flavor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flavor.swift; sourceTree = "<group>"; };
 		968ECFBD2426A8F400D1D14B /* FlavorStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlavorStore.swift; sourceTree = "<group>"; };
+		96FEBCDB24D4985D00C4423D /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,14 +99,6 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		963C48FA245CBAFC003D0EFE /* Modifiers */ = {
-			isa = PBXGroup;
-			children = (
-				963C48FB245CBB11003D0EFE /* NavigationBarModifier.swift */,
-			);
-			path = Modifiers;
-			sourceTree = "<group>";
-		};
 		964C8243241EE8EA00CD5C03 = {
 			isa = PBXGroup;
 			children = (
@@ -130,7 +122,7 @@
 		964C824E241EE8EA00CD5C03 /* LemonIceKingIOS */ = {
 			isa = PBXGroup;
 			children = (
-				963C48FA245CBAFC003D0EFE /* Modifiers */,
+				96FEBCDA24D4983D00C4423D /* Configuration */,
 				963C48F7245C9BA5003D0EFE /* Extensions */,
 				968ECFBA2426A8D900D1D14B /* Models */,
 				964C824F241EE8EA00CD5C03 /* AppDelegate.swift */,
@@ -179,6 +171,14 @@
 				968ECFBD2426A8F400D1D14B /* FlavorStore.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		96FEBCDA24D4983D00C4423D /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				96FEBCDB24D4985D00C4423D /* Navigation.swift */,
+			);
+			path = Configuration;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,11 +315,11 @@
 				964C8250241EE8EA00CD5C03 /* AppDelegate.swift in Sources */,
 				9652B6A92430E54E004DC3BC /* IceCustomCheckbox.swift in Sources */,
 				963C48FE245CBCF1003D0EFE /* View.swift in Sources */,
-				963C48FC245CBB11003D0EFE /* NavigationBarModifier.swift in Sources */,
 				964C8252241EE8EA00CD5C03 /* SceneDelegate.swift in Sources */,
 				968ECFBC2426A8E800D1D14B /* Flavor.swift in Sources */,
 				964C8257241EE8EA00CD5C03 /* ContentView.swift in Sources */,
 				963C48F9245C9BCA003D0EFE /* Color.swift in Sources */,
+				96FEBCDC24D4985D00C4423D /* Navigation.swift in Sources */,
 				964C8255241EE8EA00CD5C03 /* LemonIceKingIOS.xcdatamodeld in Sources */,
 				968ECFBE2426A8F400D1D14B /* FlavorStore.swift in Sources */,
 			);

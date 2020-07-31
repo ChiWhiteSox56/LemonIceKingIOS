@@ -22,11 +22,17 @@ struct ContentView: View {
                 Button(action: {
                     print("Flavor suggestion generator tapped!")
                 }) {
-                    Image("ice_flavor_generator").imageScale(.small)
+                    Image("ice_flavor_generator")
+                        .imageScale(.small)
+                        .accentColor(.white)
                 }
             )
-                .navigationBarColor(UIColor.defaultNavigationBarColor)
+            .background(NavigationConfigurator { nc in
+                nc.navigationBar.barTintColor = UIColor.defaultNavigationBarColor
+                nc.navigationBar.titleTextAttributes = [.foregroundColor : UIColor.white]
+            })
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 

@@ -10,5 +10,5 @@ import SwiftUI
 
 extension UIColor {
 
-    static let defaultNavigationBarColor = UIColor(named: "defaultNavigationBarColor")
+    static let defaultNavigationBarColor = UIColor(red: 0.0, green: 0.596, blue: 0.867, alpha: 1.0)
 }
