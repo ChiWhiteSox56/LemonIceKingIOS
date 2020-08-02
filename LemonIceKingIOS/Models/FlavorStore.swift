@@ -11,20 +11,22 @@ import Combine
 import Foundation
 
 class FlavorStore: ObservableObject {
-    @Published var flavors: [Flavor] = []
+
+    let flavorsJSONURL = URL(fileURLWithPath: "PreloadedFlavorList", relativeTo: FileManager.documentsDirectoryURL).appendingPathExtension("json")
+
+    @Published var flavors: [Flavor] = [] {
+        didSet {
+            saveJSONFlavorStatuses()
+        }
+    }
 
     init() {
         loadJSONFlavors()
     }
     
     private func loadJSONFlavors() {
-        print(Bundle.main.bundleURL)
 
-        let documentsDirectoryURL = URL(fileURLWithPath: "PreloadedFlavorList", relativeTo: FileManager.documentsDirectoryURL).appendingPathExtension("json")
-
-        let flavorsJSONURL = documentsDirectoryURL
-
-        print((try? FileManager.default.contentsOfDirectory(atPath: FileManager.documentsDirectoryURL.path)) ?? [] )
+        print(flavorsJSONURL)
 
         let decoder = JSONDecoder()
 
@@ -33,6 +35,22 @@ class FlavorStore: ObservableObject {
             flavors = try decoder.decode([Flavor].self, from: flavorsData)
         } catch let error {
             print (error)
+        }
+    }
+
+    private func saveJSONFlavorStatuses() {
+        let encoder = JSONEncoder()
+        encoder.outputFormatting = .prettyPrinted
+
+        do {
+            let flavorData = try encoder.encode(flavors)
+
+            // write encoded onbject to json file
+            // atomicWrite - data is saved to a separate file, then if it succeeds, it's written to the final file. This way, if something gos wrong, the original json file is not corrupted
+            try flavorData.write(to: flavorsJSONURL, options: .atomicWrite)
+
+        } catch let error {
+            print(error)
         }
     }
 }
