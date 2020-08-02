@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		960198F824D73E38003B8329 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960198F724D73E38003B8329 /* FileManager.swift */; };
 		963C48F9245C9BCA003D0EFE /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963C48F8245C9BCA003D0EFE /* Color.swift */; };
 		963C48FE245CBCF1003D0EFE /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963C48FD245CBCF1003D0EFE /* View.swift */; };
 		964C8250241EE8EA00CD5C03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964C824F241EE8EA00CD5C03 /* AppDelegate.swift */; };
@@ -21,7 +22,6 @@
 		968ECFBC2426A8E800D1D14B /* Flavor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968ECFBB2426A8E800D1D14B /* Flavor.swift */; };
 		968ECFBE2426A8F400D1D14B /* FlavorStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968ECFBD2426A8F400D1D14B /* FlavorStore.swift */; };
 		96FEBCDC24D4985D00C4423D /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FEBCDB24D4985D00C4423D /* Navigation.swift */; };
-		96FEBCE024D4A73E00C4423D /* PreloadedFlavorList.json in Resources */ = {isa = PBXBuildFile; fileRef = 96FEBCDF24D4A73E00C4423D /* PreloadedFlavorList.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		960198F724D73E38003B8329 /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
 		963C48F8245C9BCA003D0EFE /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		963C48FD245CBCF1003D0EFE /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		964C824C241EE8EA00CD5C03 /* LemonIceKingIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LemonIceKingIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,7 +63,6 @@
 		968ECFBB2426A8E800D1D14B /* Flavor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flavor.swift; sourceTree = "<group>"; };
 		968ECFBD2426A8F400D1D14B /* FlavorStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlavorStore.swift; sourceTree = "<group>"; };
 		96FEBCDB24D4985D00C4423D /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
-		96FEBCDF24D4A73E00C4423D /* PreloadedFlavorList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PreloadedFlavorList.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +95,7 @@
 			children = (
 				963C48F8245C9BCA003D0EFE /* Color.swift */,
 				963C48FD245CBCF1003D0EFE /* View.swift */,
+				960198F724D73E38003B8329 /* FileManager.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -122,7 +123,6 @@
 		964C824E241EE8EA00CD5C03 /* LemonIceKingIOS */ = {
 			isa = PBXGroup;
 			children = (
-				96FEBCDE24D4A72000C4423D /* Data */,
 				96FEBCDD24D4A2C200C4423D /* Views */,
 				96FEBCDA24D4983D00C4423D /* Configuration */,
 				963C48F7245C9BA5003D0EFE /* Extensions */,
@@ -187,14 +187,6 @@
 				964C8256241EE8EA00CD5C03 /* ContentView.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		96FEBCDE24D4A72000C4423D /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				96FEBCDF24D4A73E00C4423D /* PreloadedFlavorList.json */,
-			);
-			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,7 +295,6 @@
 			files = (
 				964C825F241EE8EC00CD5C03 /* LaunchScreen.storyboard in Resources */,
 				964C825C241EE8EC00CD5C03 /* Preview Assets.xcassets in Resources */,
-				96FEBCE024D4A73E00C4423D /* PreloadedFlavorList.json in Resources */,
 				964C8259241EE8EC00CD5C03 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -334,6 +325,7 @@
 				963C48FE245CBCF1003D0EFE /* View.swift in Sources */,
 				964C8252241EE8EA00CD5C03 /* SceneDelegate.swift in Sources */,
 				968ECFBC2426A8E800D1D14B /* Flavor.swift in Sources */,
+				960198F824D73E38003B8329 /* FileManager.swift in Sources */,
 				964C8257241EE8EA00CD5C03 /* ContentView.swift in Sources */,
 				963C48F9245C9BCA003D0EFE /* Color.swift in Sources */,
 				96FEBCDC24D4985D00C4423D /* Navigation.swift in Sources */,
@@ -507,6 +499,7 @@
 				DEVELOPMENT_TEAM = FRQ5Q2CGDN;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = LemonIceKingIOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -527,6 +520,7 @@
 				DEVELOPMENT_TEAM = FRQ5Q2CGDN;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = LemonIceKingIOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

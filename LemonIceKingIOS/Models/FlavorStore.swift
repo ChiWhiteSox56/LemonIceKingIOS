@@ -18,18 +18,19 @@ class FlavorStore: ObservableObject {
     }
     
     private func loadJSONFlavors() {
+        print(Bundle.main.bundleURL)
 
-        guard let flavorsJSONURL = Bundle.main.url(forResource: "PreloadedFlavorList", withExtension: ".json") else
-        {
-            return
-        }
+        let documentsDirectoryURL = URL(fileURLWithPath: "PreloadedFlavorList", relativeTo: FileManager.documentsDirectoryURL).appendingPathExtension("json")
+
+        let flavorsJSONURL = documentsDirectoryURL
+
+        print((try? FileManager.default.contentsOfDirectory(atPath: FileManager.documentsDirectoryURL.path)) ?? [] )
 
         let decoder = JSONDecoder()
 
         do {
             let flavorsData = try Data(contentsOf: flavorsJSONURL)
             flavors = try decoder.decode([Flavor].self, from: flavorsData)
-            print(flavors)
         } catch let error {
             print (error)
         }
