@@ -15,7 +15,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List(flavorStore.flavors) { flavor in
-                IceCustomCheckbox(action: {}, flavorId: flavor.id, flavorName: flavor.name, flavorImageName: flavor.imageName, isChecked: flavor.isChecked)
+                IceCustomCheckbox(flavorId: flavor.id, flavorName: flavor.name, flavorImageName: flavor.imageName, isChecked: flavor.isChecked)
             }
             .navigationBarTitle("Lemon Ice King Flavor Tracker", displayMode: .inline)
             .navigationBarItems(trailing:
