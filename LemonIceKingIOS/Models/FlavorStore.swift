@@ -6,50 +6,51 @@
 //  Copyright © 2020 Cindy Michalowski. All rights reserved.
 //
 
-class FlavorStore {
+
+import Combine
+import Foundation
+
+class FlavorStore: ObservableObject {
+
+    let flavorsJSONURL = URL(fileURLWithPath: "PreloadedFlavorList", relativeTo: FileManager.documentsDirectoryURL).appendingPathExtension("json")
+
+    @Published var flavors: [Flavor] = [] {
+        didSet {
+            saveJSONFlavorStatuses()
+        }
+    }
+
+    init() {
+        loadJSONFlavors()
+    }
     
-    var flavors = [
-        ("Spumoni", "ice_spumoni"),
-        ("Root Beer", "ice_root_beer"),
-        ("Lemon Lime", "ice_lemon_lime"),
-        ("Oreo", "ice_oreo"),
-        ("Cool Blue", "ice_cool_blue"),
-        ("Lemon", "ice_lemon"),
-        ("Lime", "ice_lime"),
-        ("Mint Chip", "ice_mint_chip"),
-        ("Cotton Candy", "ice_cotton_candy"),
-        ("Pineapple", "ice_pineapple"),
-        ("Raspberry", "ice_raspberry"),
-        ("Rainbow", "ice_rainbow"),
-        ("Strawberry Banana", "ice_strawberry_banana"),
-        ("Cherry", "ice_cherry"),
-        ("Mango", "ice_mango"),
-        ("Licorice", "ice_licorice"),
-        ("Apple", "ice_apple"),
-        ("Bubble Gum", "ice_bubble_gum"),
-        ("Strawberry", "ice_strawberry"),
-        ("Blueberry", "ice_blueberry"),
-        ("Pistachio", "ice_pistachio"),
-        ("Pina Colada", "ice_pina_colada"),
-        ("Rum Raisin", "ice_rum_raisin"),
-        ("Orange", "ice_orange"),
-        ("Tangerine", "ice_tangerine"),
-        ("Vanilla", "ice_vanilla"),
-        ("Sour Apple", "ice_sour_apple"),
-        ("Grape", "ice_grape"),
-        ("Banana", "ice_banana"),
-        ("Coconut", "ice_coconut"),
-        ("Peach", "ice_peach"),
-        ("Cantaloupe", "ice_cantaloupe"),
-        ("Mint", "ice_mint"),
-        ("Fruit Cocktail", "ice_fruit_cocktail"),
-        ("Vanilla Chip", "ice_vanilla_chip"),
-        ("Chocolate", "ice_chocolate"),
-        ("Watermelon", "ice_watermelon"),
-        ("Almond", "ice_almond"),
-        ("Orange-Vanilla", "ice_orange_vanilla"),
-        ("Cherry-Vanilla", "ice_cherry_vanilla"),
-        ("Peanut Butter", "ice_peanut_butter"),
-        ("Coffee", "ice_coffee")
-            ].map { Flavor(name: $0, imageName: $1) }
+    private func loadJSONFlavors() {
+
+        print(flavorsJSONURL)
+
+        let decoder = JSONDecoder()
+
+        do {
+            let flavorsData = try Data(contentsOf: flavorsJSONURL)
+            flavors = try decoder.decode([Flavor].self, from: flavorsData)
+        } catch let error {
+            print (error)
+        }
+    }
+
+    private func saveJSONFlavorStatuses() {
+        let encoder = JSONEncoder()
+        encoder.outputFormatting = .prettyPrinted
+
+        do {
+            let flavorData = try encoder.encode(flavors)
+
+            // write encoded onbject to json file
+            // atomicWrite - data is saved to a separate file, then if it succeeds, it's written to the final file. This way, if something gos wrong, the original json file is not corrupted
+            try flavorData.write(to: flavorsJSONURL, options: .atomicWrite)
+
+        } catch let error {
+            print(error)
+        }
+    }
 }
